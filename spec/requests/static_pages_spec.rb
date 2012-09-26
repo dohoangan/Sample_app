@@ -10,13 +10,16 @@ describe "Static pages" do
 		it { should have_selector('title', 	
 											:text => "Ruby On Rails Sample App") }
 		it { should_not have_selector('title', :text => '| Home')}
-		it "should have the right links on the layout" do
-			click_link "Help"
-			page.should have_selector('title', 
-													text: 'Ruby On Rails Sample App | Help')
+		describe "should have the right links on the layout" do
+			before {click_link "Help"}
+			it {should have_selector('title', 
+																text: 'Ruby On Rails Sample App | Help')}
 		end
 
-
+		describe "should should have the sign in selector" do
+			before { click_link "Sign in" }
+			it { should have_selector('title', text: "Sign in") }	
+		end
 	end
 
 	describe "Help Page" do
