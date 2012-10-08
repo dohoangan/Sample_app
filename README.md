@@ -1,1 +1,1 @@
-# This is folowing Ruby on Rails Tutorials by Michael Hartl.
+# This is README

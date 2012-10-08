@@ -9,7 +9,7 @@ describe "Static pages" do
 
 
 		before { visit root_path }
-		it { should have_selector('h1', 		:text => 'Welcome to the Sample App') }
+		it { should have_selector('h1', :text => 'Welcome to the Probases') }
 		it { should have_selector('title', 	
 											:text => "Ruby On Rails Sample App") }
 		it { should_not have_selector('title', :text => '| Home')}
