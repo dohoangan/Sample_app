@@ -11,12 +11,12 @@ describe "Static pages" do
 		before { visit root_path }
 		it { should have_selector('h1', :text => 'Welcome to the Probases') }
 		it { should have_selector('title', 	
-											:text => "Ruby On Rails Sample App") }
+											:text => "Probases") }
 		it { should_not have_selector('title', :text => '| Home')}
 		describe "should have the right links on the layout" do
 			before {click_link "Help"}
 			it {should have_selector('title', 
-																text: 'Ruby On Rails Sample App | Help')}
+																text: 'Probases | Help')}
 		end
 
 		describe "should should have the sign in selector" do
@@ -57,21 +57,21 @@ describe "Static pages" do
 		before { visit help_path }
 		it {should have_selector('h1', text: 'Help Page')}
 		it { should have_selector('title', 
-													text: 'Ruby On Rails Sample App | Help') }	
+													text: 'Probases | Help') }	
 	end
 
 	describe "About Us" do
 		before { visit about_path }
 		it { should have_selector('h1', :text => 'About Us') }
 		it { should have_selector('title', 
-													:text => 'Ruby On Rails Sample App | About us') }
+													:text => 'Probases | About us') }
 	end
 
 	describe "Contact Us" do
 		before { visit contact_path }
 		it { should have_selector('h1', :text => 'Contact Us') }
 		it { should have_selector('title', 
-													:text => 'Ruby On Rails Sample App | Contact us') }
+													:text => 'Probases | Contact us') }
 	end
 
 end
